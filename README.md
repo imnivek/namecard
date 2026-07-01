@@ -2,6 +2,9 @@
 
 手機優先、卡片化的個人數位名片單頁。設計流程：Apple Wallet 上的 QR Code → 掃描 → 開啟此網頁。
 
+**線上網址（已部署 GitHub Pages）：** https://imnivek.github.io/namecard/
+**GitHub Repo：** https://github.com/imnivek/namecard
+
 ## 檔案結構
 
 ```
@@ -64,5 +67,5 @@ python -m http.server 8000
 - **改 vCard 資訊**：在 `index.html` 底部 `<script>` 內的 `vcard` 陣列調整（目前 Email、微信 ID、官網、IG 皆已填入）。
 
 ## 備註
-- 目前 Email 使用 `vivian.yuxue@gmail.com`；若名片要對外，建議改成你對外的商務信箱，記得同步更新 vCard 內的 EMAIL。
+- 目前 Email 為 `imnivek@gmail.com`（mailto 連結與 vCard 皆已同步）。
 - 視覺沿用 404方桌創辦人簡報的設計語言：炭黑 `#1A1815` × 珊瑚橘 `#E8834E` × 米色 `#F1EDE6`，字體 Noto Sans TC / Inter / JetBrains Mono。
