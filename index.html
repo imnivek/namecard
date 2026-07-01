@@ -96,11 +96,23 @@
   .avail{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1px;color:var(--on-dark-2);display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;}
   .avail::before{content:'';width:7px;height:7px;border-radius:50%;background:#7BC47F;box-shadow:0 0 0 3px rgba(123,196,127,.2);}
 
+  .hero-id{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:22px;position:relative;z-index:1;}
   .hero-photo{
-    position:relative;z-index:1;width:118px;height:118px;border-radius:50%;
+    width:112px;height:112px;border-radius:50%;flex:0 0 auto;
     object-fit:cover;object-position:50% 22%;border:2px solid rgba(232,131,78,.55);
-    box-shadow:0 14px 34px -14px rgba(0,0,0,.7);margin-bottom:22px;
+    box-shadow:0 14px 34px -14px rgba(0,0,0,.7);
   }
+  .hero-wechat{
+    display:inline-flex;align-items:center;gap:11px;padding:11px 16px 11px 11px;
+    border-radius:15px;background:rgba(7,193,96,.12);border:1px solid rgba(7,193,96,.45);
+    color:var(--on-dark);transition:transform .12s, background .18s;
+  }
+  .hero-wechat:active{transform:translateY(1px);}
+  .hw-ic{width:36px;height:36px;border-radius:11px;background:#07C160;display:flex;align-items:center;justify-content:center;color:#fff;flex:0 0 auto;box-shadow:0 8px 16px -8px rgba(7,193,96,.8);}
+  .hw-ic svg{width:20px;height:20px;}
+  .hw-tx{display:flex;flex-direction:column;line-height:1.15;min-width:0;}
+  .hw-tx b{font-size:14px;font-weight:700;}
+  .hw-tx small{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--on-dark-2);margin-top:3px;letter-spacing:.3px;}
   .hero h1{
     position:relative;z-index:1;
     font-family:'Noto Sans TC',sans-serif;font-weight:900;
@@ -290,7 +302,13 @@
       <span class="brand-tag"><b>404</b>方桌 · TEAM</span>
       <span class="avail">Open to connect</span>
     </div>
-    <img class="hero-photo" src="assets/profile.jpg" alt="鄭凱文 Kevin Cheng">
+    <div class="hero-id">
+      <img class="hero-photo" src="assets/profile.jpg" alt="鄭凱文 Kevin Cheng">
+      <a class="hero-wechat" href="https://u.wechat.com/kK3KwFW7XEmRIAD9Zq5MxZI?s=2" target="_blank" rel="noopener">
+        <span class="hw-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 4C5.36 4 2 6.86 2 10.38c0 1.98 1.08 3.75 2.77 4.92L4 18l2.5-1.3c.86.24 1.7.36 2.6.36l.5-.01a5.3 5.3 0 0 1-.3-1.76c0-3.2 3.06-5.7 6.7-5.7l.5.02C15.9 6.15 13 4 9.5 4Zm-2.4 3.1a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9Zm4.9 0a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9ZM16.5 10.5c-3.03 0-5.5 2.06-5.5 4.62 0 2.56 2.47 4.63 5.5 4.63.68 0 1.33-.1 1.94-.28L20 20.5l-.5-1.6C21.06 18 22 16.63 22 15.12c0-2.56-2.47-4.62-5.5-4.62Zm-1.9 2.3a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6Zm3.8 0a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6Z"/></svg></span>
+        <span class="hw-tx"><b>加我微信</b><small>taiwan-kevin</small></span>
+      </a>
+    </div>
     <h1>鄭凱文</h1>
     <p class="en">Kevin Cheng</p>
     <p class="role">404方桌 共同創辦人 · <span>Co-Founder</span></p>
