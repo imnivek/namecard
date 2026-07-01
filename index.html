@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1A1815">
+<title>鄭凱文 Kevin Cheng · 404方桌 共同創辦人｜數位名片</title>
+<meta name="description" content="連續創業者 · AI 整合操盤手 · 跨域成長設計師。404方桌共同創辦人，Vibe Coding 600+ 開發者社群共創。">
+
+<!-- Open Graph -->
+<meta property="og:title" content="鄭凱文 Kevin Cheng · 404方桌 共同創辦人">
+<meta property="og:description" content="連續創業者 · AI 整合操盤手 · 跨域成長設計師">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="assets/profile.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1A1815;
+    --ink-2:#232019;
+    --ink-3:#2E2A22;
+    --cream:#F1EDE6;
+    --paper:#FCFAF6;
+    --paper-2:#F6F2EA;
+    --accent:#E8834E;
+    --accent-2:#D96E37;
+    --accent-soft:rgba(232,131,78,.12);
+    --text:#211E1A;
+    --text-2:#5A554D;
+    --text-3:#918B80;
+    --on-dark:#FBF8F3;
+    --on-dark-2:#B7B0A4;
+    --on-dark-3:#7C766B;
+    --line:rgba(45,40,32,.12);
+    --line-2:rgba(45,40,32,.08);
+    --line-dark:rgba(251,248,243,.10);
+    --r-lg:22px;
+    --r-md:16px;
+    --r-sm:11px;
+    --shadow:0 22px 48px -30px rgba(30,25,18,.45);
+    --shadow-soft:0 12px 30px -22px rgba(30,25,18,.5);
+  }
+
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;padding:0;
+    background:#100E0B;
+    color:var(--text);
+    font-family:'Noto Sans TC','Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:16px;line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+
+  /* phone frame on desktop */
+  .shell{
+    max-width:468px;margin:0 auto;background:var(--cream);
+    min-height:100vh;position:relative;overflow:hidden;
+    box-shadow:0 0 80px -20px rgba(0,0,0,.6);
+  }
+
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- eyebrow ---------- */
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;font-weight:600;letter-spacing:2px;
+    text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;
+    color:var(--accent);margin:0;
+  }
+  .eyebrow::before{content:'';width:16px;height:1.5px;background:var(--accent);display:inline-block;}
+  .eyebrow.on-light{color:var(--accent-2);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(120% 80% at 80% 0%, rgba(232,131,78,.18) 0%, transparent 55%),
+      linear-gradient(180deg,#1E1B16 0%, var(--ink) 60%, #171410 100%);
+    color:var(--on-dark);
+    padding:calc(env(safe-area-inset-top) + 34px) 26px 34px;
+    position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(circle at 12% 18%, rgba(255,255,255,.03) 0, transparent 42%);
+  }
+  .hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px;position:relative;z-index:1;}
+  .brand-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--on-dark-2);}
+  .brand-tag b{color:var(--accent);}
+  .avail{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:1px;color:var(--on-dark-2);display:inline-flex;align-items:center;gap:6px;text-transform:uppercase;}
+  .avail::before{content:'';width:7px;height:7px;border-radius:50%;background:#7BC47F;box-shadow:0 0 0 3px rgba(123,196,127,.2);}
+
+  .hero-photo{
+    position:relative;z-index:1;width:118px;height:118px;border-radius:50%;
+    object-fit:cover;object-position:50% 22%;border:2px solid rgba(232,131,78,.55);
+    box-shadow:0 14px 34px -14px rgba(0,0,0,.7);margin-bottom:22px;
+  }
+  .hero h1{
+    position:relative;z-index:1;
+    font-family:'Noto Sans TC',sans-serif;font-weight:900;
+    font-size:clamp(40px,13vw,56px);line-height:1;letter-spacing:1px;margin:0 0 8px;
+  }
+  .hero .en{position:relative;z-index:1;font-family:'Inter',serif;font-style:italic;font-weight:400;font-size:20px;color:var(--on-dark-2);margin:0 0 18px;letter-spacing:.5px;}
+  .hero .role{position:relative;z-index:1;font-size:16px;font-weight:700;margin:0 0 4px;color:var(--on-dark);}
+  .hero .role span{color:var(--accent);}
+  .tagline{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 18px;}
+  .tag{font-size:12px;font-weight:500;padding:5px 12px;border-radius:999px;border:1px solid var(--line-dark);background:rgba(251,248,243,.04);color:var(--on-dark);}
+  .hero .lead{position:relative;z-index:1;font-size:14.5px;line-height:1.75;color:var(--on-dark-2);margin:0 0 18px;}
+  .hero .lead b{color:var(--on-dark);font-weight:700;}
+  .creds{position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px;color:var(--on-dark-3);border-top:1px solid var(--line-dark);padding-top:16px;line-height:1.9;}
+
+  .hero-cta{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-family:'Noto Sans TC',sans-serif;font-size:14px;font-weight:700;
+    padding:14px 16px;border-radius:var(--r-sm);cursor:pointer;border:1px solid transparent;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    min-height:48px;width:100%;
+  }
+  .btn svg{width:17px;height:17px;flex:0 0 auto;}
+  .btn-primary{background:var(--accent);color:#1A140F;box-shadow:0 10px 24px -12px rgba(232,131,78,.7);}
+  .btn-primary:active{transform:translateY(1px);}
+  .btn-ghost{background:rgba(251,248,243,.06);color:var(--on-dark);border-color:var(--line-dark);}
+  .btn-ghost:active{transform:translateY(1px);}
+
+  /* ---------- sections ---------- */
+  section{padding:40px 22px;}
+  .sec-head{margin-bottom:22px;}
+  .sec-head h2{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:24px;line-height:1.2;letter-spacing:.5px;margin:12px 0 6px;color:var(--text);}
+  .sec-head p{font-size:13.5px;color:var(--text-2);margin:0;}
+
+  /* positioning quote */
+  .quote{background:var(--ink);color:var(--on-dark);border-radius:var(--r-lg);padding:32px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden;}
+  .quote::before{content:'"';position:absolute;top:-18px;right:14px;font-family:Georgia,serif;font-size:130px;color:rgba(232,131,78,.16);line-height:1;}
+  .quote .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin:0 0 16px;}
+  .quote h3{font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:22px;line-height:1.5;margin:0 0 18px;position:relative;z-index:1;}
+  .quote h3 em{font-style:normal;color:var(--accent);}
+  .quote p{font-size:14px;line-height:1.8;color:var(--on-dark-2);margin:0;position:relative;z-index:1;}
+
+  /* numbers */
+  .num-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+  .num{background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-md);padding:18px 16px;box-shadow:var(--shadow-soft);}
+  .num .n{font-family:'Inter',sans-serif;font-weight:700;font-size:34px;line-height:1;letter-spacing:-1px;color:var(--text);}
+  .num .n u{text-decoration:none;color:var(--accent);font-size:20px;font-weight:700;}
+  .num .bar{width:26px;height:3px;background:var(--accent);border-radius:2px;margin:10px 0 9px;}
+  .num .t{font-weight:700;font-size:13px;color:var(--text);}
+  .num .d{font-size:11.5px;color:var(--text-3);line-height:1.5;}
+  .num-foot{margin:14px 2px 0;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text-3);letter-spacing:.3px;line-height:1.7;}
+
+  /* brand cards */
+  .brand{background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:22px;margin-bottom:16px;box-shadow:var(--shadow-soft);position:relative;overflow:hidden;}
+  .brand-head{display:flex;align-items:center;gap:15px;margin-bottom:15px;}
+  .logo-chip{width:66px;height:66px;flex:0 0 auto;border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .logo-chip img{width:100%;height:100%;object-fit:contain;}
+  .logo-chip.white{background:#fff;border:1px solid var(--line-2);padding:8px;}
+  .logo-chip.dark{background:var(--ink);padding:6px;}
+  .logo-chip.plain{padding:0;}
+  .brand-title{flex:1;min-width:0;}
+  .brand-title .k{font-size:9.5px;font-family:'JetBrains Mono',monospace;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-2);font-weight:600;}
+  .brand-title h3{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:20px;margin:3px 0 2px;color:var(--text);line-height:1.15;}
+  .brand-title .r{font-size:12px;color:var(--text-2);font-weight:500;}
+  .brand-desc{font-size:13.5px;line-height:1.72;color:var(--text-2);margin:0 0 15px;}
+  .brand-desc b{color:var(--text);font-weight:700;}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px;}
+  .mini{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;padding:4px 9px;border-radius:6px;background:var(--paper-2);border:1px solid var(--line-2);color:var(--text-2);}
+  .links{display:grid;gap:9px;}
+  .links.two{grid-template-columns:1fr 1fr;}
+  .link{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line);
+    background:var(--paper-2);font-size:13px;font-weight:700;color:var(--text);
+    transition:background .18s,border-color .18s,transform .12s;min-height:46px;
+  }
+  .link .lt{display:flex;align-items:center;gap:9px;min-width:0;}
+  .link .lt small{display:block;font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:500;color:var(--text-3);letter-spacing:.2px;}
+  .link .lt span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .link .arrow{color:var(--accent-2);flex:0 0 auto;}
+  .link:active{transform:translateY(1px);}
+  .link.accent{background:var(--ink);color:var(--on-dark);border-color:var(--ink);}
+  .link.accent small{color:var(--on-dark-3);}
+  .link.accent .arrow{color:var(--accent);}
+
+  /* expertise accordion */
+  .exp{background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-md);margin-bottom:11px;overflow:hidden;box-shadow:var(--shadow-soft);}
+  .exp-btn{width:100%;text-align:left;background:none;border:0;padding:18px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;font-family:inherit;}
+  .exp-idx{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--accent-2);flex:0 0 auto;}
+  .exp-t{flex:1;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:15.5px;color:var(--text);line-height:1.3;}
+  .exp-t small{display:block;font-weight:500;font-size:11.5px;color:var(--text-3);margin-top:2px;}
+  .exp-tog{width:22px;height:22px;flex:0 0 auto;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--text-2);transition:transform .25s;}
+  .exp.open .exp-tog{transform:rotate(45deg);border-color:var(--accent);color:var(--accent-2);}
+  .exp-body{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .exp-inner{padding:0 18px 20px 46px;}
+  .exp-row{padding:10px 0;border-top:1px solid var(--line-2);}
+  .exp-row:first-child{border-top:0;padding-top:2px;}
+  .exp-row .rt{font-weight:700;font-size:13.5px;color:var(--text);}
+  .exp-row .rt em{font-style:normal;color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:11px;margin-left:6px;font-weight:600;}
+  .exp-row .rd{font-size:12.5px;color:var(--text-2);line-height:1.65;margin-top:3px;}
+
+  /* timeline */
+  .tl{position:relative;padding-left:26px;}
+  .tl::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .tl-item{position:relative;padding-bottom:22px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:'';position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--cream);border:2px solid var(--text-3);}
+  .tl-item.now::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);}
+  .tl-item .yr{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:1px;color:var(--accent-2);text-transform:uppercase;}
+  .tl-item .h{font-weight:700;font-size:15px;color:var(--text);margin:2px 0 3px;}
+  .tl-item .d{font-size:12.5px;color:var(--text-2);line-height:1.6;}
+
+  /* why me */
+  .why{background:var(--ink);color:var(--on-dark);border-radius:var(--r-lg);padding:30px 24px;box-shadow:var(--shadow);}
+  .why .lead{font-size:16px;font-weight:700;line-height:1.65;margin:14px 0 24px;}
+  .why .lead em{font-style:normal;color:var(--accent);}
+  .why-item{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line-dark);}
+  .why-item .no{font-family:'Inter',sans-serif;font-style:italic;font-weight:700;font-size:24px;color:var(--accent);flex:0 0 auto;line-height:1;width:32px;}
+  .why-item .wt{font-weight:700;font-size:15px;margin-bottom:4px;}
+  .why-item .wd{font-size:12.5px;color:var(--on-dark-2);line-height:1.65;}
+
+  /* contact */
+  .contact-grid{display:grid;gap:10px;}
+  .qr-card{background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:22px;text-align:center;box-shadow:var(--shadow-soft);}
+  .qr-card .qh{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent-2);margin-bottom:4px;}
+  .qr-card h3{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:18px;margin:0 0 4px;color:var(--text);}
+  .qr-card .id{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-2);margin-bottom:16px;}
+  .qr-card .id b{color:var(--accent-2);}
+  .qr-img{width:82%;max-width:300px;margin:0 auto;border-radius:14px;overflow:hidden;border:1px solid var(--line-2);background:#fff;}
+  .qr-note{font-size:12px;color:var(--text-3);margin-top:14px;}
+
+  .soc{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .soc-btn{display:flex;align-items:center;gap:11px;padding:15px 16px;border-radius:var(--r-md);background:var(--paper);border:1px solid var(--line-2);box-shadow:var(--shadow-soft);transition:transform .12s;min-height:58px;}
+  .soc-btn:active{transform:translateY(1px);}
+  .soc-ic{width:38px;height:38px;flex:0 0 auto;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;}
+  .soc-ic svg{width:20px;height:20px;}
+  .ig{background:linear-gradient(45deg,#F9A140,#E85D5B 40%,#C837AB 70%,#7024C4);}
+  .th{background:#000;}
+  .mail{background:var(--accent);}
+  .web{background:var(--ink);}
+  .soc-tx{min-width:0;}
+  .soc-tx .st{font-weight:700;font-size:13.5px;color:var(--text);}
+  .soc-tx .sd{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .soc-btn.wide{grid-column:1 / -1;}
+
+  /* footer */
+  footer{background:var(--ink);color:var(--on-dark-2);padding:34px 22px calc(env(safe-area-inset-bottom) + 34px);text-align:center;}
+  footer .fname{font-family:'Noto Sans TC',sans-serif;font-weight:900;font-size:22px;color:var(--on-dark);letter-spacing:1px;}
+  footer .fen{font-family:'Inter',serif;font-style:italic;font-size:13px;color:var(--on-dark-3);margin:4px 0 18px;}
+  footer .frow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px;color:var(--on-dark-3);line-height:1.9;}
+  footer .fbrand{color:var(--accent);font-weight:600;}
+  .save-btn{display:inline-flex;align-items:center;gap:8px;margin:18px 0 6px;padding:13px 22px;border-radius:999px;background:var(--accent);color:#1A140F;font-weight:700;font-size:14px;border:0;cursor:pointer;font-family:inherit;}
+  .save-btn svg{width:16px;height:16px;}
+
+  /* reveal animation */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+  .rv.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+
+  @media (max-width:360px){
+    section{padding:34px 18px;}
+    .hero{padding-left:20px;padding-right:20px;}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero-top">
+      <span class="brand-tag"><b>404</b>方桌 · TEAM</span>
+      <span class="avail">Open to connect</span>
+    </div>
+    <img class="hero-photo" src="assets/profile.jpg" alt="鄭凱文 Kevin Cheng">
+    <h1>鄭凱文</h1>
+    <p class="en">Kevin Cheng</p>
+    <p class="role">404方桌 共同創辦人 · <span>Co-Founder</span></p>
+    <div class="tagline">
+      <span class="tag">連續創業者</span>
+      <span class="tag">AI 整合操盤手</span>
+      <span class="tag">跨域成長設計師</span>
+    </div>
+    <p class="lead">從 <b>9 間連鎖品牌</b>、<b>20 人跨國團隊</b>，到 <b>600+ 人 AI 開發者社群</b>——10 年實戰經驗，整合為 AI 時代的成長飛輪。</p>
+    <p class="creds">NTNU 雙學士　·　ex-Microsoft Student Partner　·　ex-Samsung Mobiler</p>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        聯絡 / 加好友
+      </a>
+      <a class="btn btn-ghost" href="#brands">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        看創業品牌
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= POSITIONING ================= -->
+  <section>
+    <div class="quote rv">
+      <p class="sub">Positioning</p>
+      <h3>不是教 AI 概念的人，<br>是用 <em>AI 把產品跑出市場</em>的人。</h3>
+      <p>師大教育 / 企管雙學士，從補習班、職傷防治、成人培訓起步——後創立 9 間連鎖店、操盤跨國團隊、共創 AI 社群與多個品牌。所有經歷指向同一件事：把複雜的東西，翻譯成可運作的系統。</p>
+    </div>
+  </section>
+
+  <!-- ================= NUMBERS ================= -->
+  <section>
+    <div class="sec-head rv">
+      <p class="eyebrow on-light">10 Years · By the Numbers</p>
+      <h2>十年累積的硬數字</h2>
+      <p>橫跨連續創業、AI 整合與跨國增長的實戰紀錄。</p>
+    </div>
+    <div class="num-grid">
+      <div class="num rv"><div class="n">9<u>間</u></div><div class="bar"></div><div class="t">連鎖分店</div><div class="d">從 0 到 1 打造</div></div>
+      <div class="num rv"><div class="n">6<u>x</u></div><div class="bar"></div><div class="t">客單價提升</div><div class="d">200萬 → 千萬營收</div></div>
+      <div class="num rv"><div class="n">200<u>%</u></div><div class="bar"></div><div class="t">學員成長</div><div class="d">lin 學苑營收倍翻</div></div>
+      <div class="num rv"><div class="n">5<u>x</u></div><div class="bar"></div><div class="t">入金量倍增</div><div class="d">遊戲化金融課程</div></div>
+      <div class="num rv"><div class="n">20<u>+</u></div><div class="bar"></div><div class="t">跨國團隊</div><div class="d">菲律賓・泰國市場</div></div>
+      <div class="num rv"><div class="n">600<u>+</u></div><div class="bar"></div><div class="t">AI 開發社群</div><div class="d">Vibe Coding 共創</div></div>
+      <div class="num rv"><div class="n">100<u>+</u></div><div class="bar"></div><div class="t">旅宿業者</div><div class="d">小柔 AI 拓展</div></div>
+      <div class="num rv"><div class="n">80<u>+</u></div><div class="bar"></div><div class="t">公開講座</div><div class="d">上千名學員</div></div>
+    </div>
+    <p class="num-foot rv">單店年營收 200萬 → 破千萬　·　跨國遊戲平台日銷售規模 2,000 萬 PHP</p>
+  </section>
+
+  <!-- ================= BRANDS ================= -->
+  <section id="brands">
+    <div class="sec-head rv">
+      <p class="eyebrow on-light">Ventures & Brands</p>
+      <h2>創業品牌與作品</h2>
+      <p>四個現在正在操盤的品牌，與可以直接點進去的連結。</p>
+    </div>
+
+    <!-- 404 TABLE -->
+    <article class="brand rv">
+      <div class="brand-head">
+        <div class="logo-chip white"><img src="assets/logo-404table.png" alt="404方桌"></div>
+        <div class="brand-title">
+          <div class="k">AI Accelerator · 旗艦</div>
+          <h3>404 方桌</h3>
+          <div class="r">共同創辦人 · AI 整合創業加速器</div>
+        </div>
+      </div>
+      <p class="brand-desc">把過去 10 年的實體商業、AI 落地與跨國增長經驗，整合成一個系統化的<b>創業加速器</b>。不只是課程，是「讓人願意聚集、願意被改變」的場域。</p>
+      <div class="chips"><span class="mini">AI 整合創業</span><span class="mini">加速器</span><span class="mini">社群策展</span></div>
+      <div class="links">
+        <a class="link accent" href="https://imnivek.github.io/404table-website-v2/index.html" target="_blank" rel="noopener">
+          <span class="lt"><span>官方網站<small>404table-website-v2</small></span></span>
+          <span class="arrow">↗</span>
+        </a>
+        <div class="links two">
+          <a class="link" href="https://camp-sr.404table.com/" target="_blank" rel="noopener"><span class="lt"><span>Camp SR<small>資深營</small></span></span><span class="arrow">↗</span></a>
+          <a class="link" href="https://camp-jr.404table.com/" target="_blank" rel="noopener"><span class="lt"><span>Camp JR<small>青年營</small></span></span><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Vibe Coding -->
+    <article class="brand rv">
+      <div class="brand-head">
+        <div class="logo-chip plain"><img src="assets/logo-vibecoding.png" alt="Vibe Coding Taipei"></div>
+        <div class="brand-title">
+          <div class="k">AI Dev Community · 600+</div>
+          <h3>Vibe Coding Taipei</h3>
+          <div class="r">共同創辦人 · AI 開發者社群</div>
+        </div>
+      </div>
+      <p class="brand-desc">經營 <b>600+ 人 AI 開發者社群</b>，推動 Claude / Cursor / Zeabur 等工具的商業化落地，把 AI 工具變成真正跑得動的商業飛輪。</p>
+      <div class="chips"><span class="mini">Claude</span><span class="mini">Cursor</span><span class="mini">Zeabur</span><span class="mini">工作坊</span></div>
+      <div class="links">
+        <a class="link accent" href="https://openspace.vibes.com.tw/index.html#/zones" target="_blank" rel="noopener">
+          <span class="lt"><span>Open Space 共創空間<small>openspace.vibes.com.tw</small></span></span><span class="arrow">↗</span>
+        </a>
+        <a class="link" href="https://www.threads.com/@vibecoding.taiwan" target="_blank" rel="noopener">
+          <span class="lt"><span>Threads @vibecoding.taiwan<small>社群動態</small></span></span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- 25HRS -->
+    <article class="brand rv">
+      <div class="brand-head">
+        <div class="logo-chip dark"><img src="assets/logo-25hrs.png" alt="25HRS 第廿五時"></div>
+        <div class="brand-title">
+          <div class="k">Lifestyle Brand · The 25th Hour</div>
+          <h3>25HRS 第廿五時</h3>
+          <div class="r">品牌操盤 · 生活風格品牌</div>
+        </div>
+      </div>
+      <p class="brand-desc">為現代人打造的<b>「第廿五個小時」</b>——把星象、療癒與生活風格整合成一個有溫度的品牌體驗。</p>
+      <div class="chips"><span class="mini">品牌設計</span><span class="mini">生活風格</span><span class="mini">星象療癒</span></div>
+      <div class="links">
+        <a class="link accent" href="https://www.25hrs.tw/" target="_blank" rel="noopener">
+          <span class="lt"><span>25HRS 官方網站<small>www.25hrs.tw</small></span></span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- 7G -->
+    <article class="brand rv">
+      <div class="brand-head">
+        <div class="logo-chip plain"><img src="assets/logo-7g.png" alt="7G 奇雞命相館"></div>
+        <div class="brand-title">
+          <div class="k">命理 × 星象 × 契機</div>
+          <h3>7G 奇雞先生</h3>
+          <div class="r">品牌操盤 · 命相館</div>
+        </div>
+      </div>
+      <p class="brand-desc">把傳統命理用<b>可互動、可體驗</b>的方式重新設計——命理 × 星象 × 契機，讓玄學變成年輕世代也願意親近的品牌。</p>
+      <div class="chips"><span class="mini">命理</span><span class="mini">星象</span><span class="mini">互動體驗</span></div>
+      <div class="links">
+        <a class="link accent" href="https://7g-fortune.com/" target="_blank" rel="noopener">
+          <span class="lt"><span>7G 奇雞命相館<small>7g-fortune.com</small></span></span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= EXPERTISE ================= -->
+  <section>
+    <div class="sec-head rv">
+      <p class="eyebrow on-light">Track Record</p>
+      <h2>五大專業模組</h2>
+      <p>點開看每一段實戰經歷。</p>
+    </div>
+
+    <div class="exp rv">
+      <button class="exp-btn"><span class="exp-idx">01</span><span class="exp-t">連續創業 × 0-1 品牌操盤<small>從零打造可規模化的消費品牌</small></span><span class="exp-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="exp-body"><div class="exp-inner">
+        <div class="exp-row"><div class="rt">貓咪貓咪娛樂品牌<em>COO · 2015-21</em></div><div class="rd">1 間店擴展至 9 間連鎖，單店年營業額 200萬 → 破千萬，客單價 6 倍提升，每年 20,000+ 人次造訪。</div></div>
+        <div class="exp-row"><div class="rt">Le MINI 法式手工甜點<em>Co-Founder · CMO</em></div><div class="rd">法式迷你脆可頌，進駐誠品南西旗艦快閃、新北歡樂耶誕城。街頭現炸流量 × 精品禮盒獲利雙引擎。</div></div>
+        <div class="exp-row"><div class="rt">優點整合行銷<em>負責人 · 2019-24</em></div><div class="rd">跨產業整合行銷顧問，提供商模 → 網站架構 → SEO/SEM → 線下活動的完整解決方案。</div></div>
+      </div></div>
+    </div>
+
+    <div class="exp rv">
+      <button class="exp-btn"><span class="exp-idx">02</span><span class="exp-t">AI 應用落地 × 敏捷開發<small>把 AI 工具變成商業飛輪</small></span><span class="exp-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="exp-body"><div class="exp-inner">
+        <div class="exp-row"><div class="rt">Vibe Coding<em>共同創辦人</em></div><div class="rd">600+ 人 AI 開發者社群，推動 Claude / Cursor / Zeabur 工具商業化。</div></div>
+        <div class="exp-row"><div class="rt">小柔 AI<em>主導開發</em></div><div class="rd">民宿 / 旅宿智能管家 SaaS，AI 客服 + 員工管理 + 評論監測一站式，拓展 100+ 家旅宿業者。</div></div>
+        <div class="exp-row"><div class="rt">AI 工具開發實作</div><div class="rd">紫微帝垣（命盤解析）· Master Architect（SEO 內容生成）· MindMaster（AI 出題測驗）· 2026 開店大亨（像素風遊戲化教學）。</div></div>
+      </div></div>
+    </div>
+
+    <div class="exp rv">
+      <button class="exp-btn"><span class="exp-idx">03</span><span class="exp-t">跨國數位增長 × 流量操盤<small>數據驅動、可複製的增長系統</small></span><span class="exp-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="exp-body"><div class="exp-inner">
+        <div class="exp-row"><div class="rt">外商集團<em>行銷流量部經理 · 2022-now</em></div><div class="rd">帶領 20 人跨國營運團隊（新加坡、菲律賓、泰國），主導 SOP 與工作流 AI 化。操盤 SEO 站群 + 短影音 + AI 矩陣，站穩日銷 2,000 萬 PHP 規模。</div></div>
+        <div class="exp-row"><div class="rt">lin 國際學苑<em>SEO / PM / BD · 2021-22</em></div><div class="rd">設計「遊戲化金融課程」武俠主題交易世界觀，學員 +200%、入金量 +5 倍。</div></div>
+      </div></div>
+    </div>
+
+    <div class="exp rv">
+      <button class="exp-btn"><span class="exp-idx">04</span><span class="exp-t">沉浸式策展 × 社群動能<small>把抽象議題變成可體驗的實體事件</small></span><span class="exp-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="exp-body"><div class="exp-inner">
+        <div class="exp-row"><div class="rt">末日議會 · AI 議題派對<em>總策展人 · 2026</em></div><div class="rd">西門町 100 人沉浸式策展，含世界觀 / 間諜機制 / 互動投票，聚集 20+ 位 AI 圈 KOL。</div></div>
+        <div class="exp-row"><div class="rt">教育策展 × 培訓設計<em>十年累積</em></div><div class="rd">累積 80+ 場公開講座、上千名學員，跨補習班、企業培訓、職場健康教育到 Vibe Coding 工作坊。</div></div>
+      </div></div>
+    </div>
+
+    <div class="exp rv">
+      <button class="exp-btn"><span class="exp-idx">05</span><span class="exp-t">教育底蘊 × 跨域專業養成<small>跨教育、健康、國際品牌的人才基礎</small></span><span class="exp-tog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+      <div class="exp-body"><div class="exp-inner">
+        <div class="exp-row"><div class="rt">國立臺灣師範大學<em>教育 × 企管 雙學士</em></div><div class="rd">教育系統 + 商管思維的跨域底蘊，奠定「把專業翻譯成可被理解內容」的核心能力。</div></div>
+        <div class="exp-row"><div class="rt">榮總職傷防治中心<em>個案健康管理師</em></div><div class="rd">勞動部職安署合作專案，親自訪廠健康評估。</div></div>
+        <div class="exp-row"><div class="rt">Microsoft × Samsung<em>Student Partner / Mobiler</em></div><div class="rd">學生時期即被全球科技品牌選為早期培訓計畫成員。</div></div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ================= TIMELINE ================= -->
+  <section>
+    <div class="sec-head rv">
+      <p class="eyebrow on-light">Career Timeline</p>
+      <h2>十年職涯軌跡</h2>
+      <p>From Foundation to Founding · 2010 → 2026</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item rv"><div class="yr">2010–14 · Foundation</div><div class="h">教育養成</div><div class="d">師大教育／企管雙學士 · Microsoft／Samsung 學生大使</div></div>
+      <div class="tl-item rv"><div class="yr">2014–15 · Teaching</div><div class="h">專業起點</div><div class="d">佳一補習班 · 艾美普教育機構 · 榮總職傷防治中心</div></div>
+      <div class="tl-item rv"><div class="yr">2015–21 · Building</div><div class="h">連續創業</div><div class="d">貓咪貓咪 COO · 9 間連鎖分店 · 單店破千萬</div></div>
+      <div class="tl-item rv"><div class="yr">2019–24 · Scaling</div><div class="h">整合行銷</div><div class="d">優點整合行銷負責人 · 北市東區商圈案 · 多元客戶操盤</div></div>
+      <div class="tl-item rv"><div class="yr">2022–now · Growth</div><div class="h">跨國成長</div><div class="d">外商集團行銷流量部經理 · 20 人跨國團隊</div></div>
+      <div class="tl-item now rv"><div class="yr">2026–now · Founding</div><div class="h">AI 整合創業</div><div class="d">404方桌共同創辦人 · Vibe Coding 600+ · Le MINI／小柔 AI</div></div>
+    </div>
+  </section>
+
+  <!-- ================= WHY ME ================= -->
+  <section>
+    <div class="why rv">
+      <p class="eyebrow">Why I'm the Founder</p>
+      <p class="lead">404方桌不是我第一個從零打造的事業——是我把過去 10 年所有經驗，<em>整合成一個系統的事業。</em></p>
+      <div class="why-item"><div class="no">01</div><div><div class="wt">0-1 跑通過</div><div class="wd">9 間連鎖品牌、單店破千萬、6 倍客單——我跑通過實體商業模式的完整循環。</div></div></div>
+      <div class="why-item"><div class="no">02</div><div><div class="wt">AI 真的會做</div><div class="wd">Vibe Coding 600+ 社群、小柔 AI 100 家業者——我用 AI 真的把產品送到市場。</div></div></div>
+      <div class="why-item"><div class="no">03</div><div><div class="wt">規模能複製</div><div class="wd">20 人跨國團隊、日存 2,000 萬 PHP——我具備把成功經驗變成 SOP 的操盤力。</div></div></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <div class="sec-head rv">
+      <p class="eyebrow on-light">Let's Connect</p>
+      <h2>聯絡與社群</h2>
+      <p>掃描下方微信 QR，或從社群追蹤我。</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="qr-card rv">
+        <div class="qh">WeChat · 微信</div>
+        <h3>Kevin</h3>
+        <div class="id">ID：<b>taiwan-kevin</b>　·　臺北市</div>
+        <div class="qr-img"><img src="assets/wechat-qr.jpg" alt="微信 QR Code · taiwan-kevin"></div>
+        <div class="qr-note">掃描 QR Code，新增我為朋友。</div>
+      </div>
+
+      <div class="soc">
+        <a class="soc-btn rv" href="https://www.instagram.com/nivek0329/" target="_blank" rel="noopener">
+          <span class="soc-ic ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" stroke="none"/></svg></span>
+          <span class="soc-tx"><span class="st">Instagram</span><span class="sd">@nivek0329</span></span>
+        </a>
+        <a class="soc-btn rv" href="https://www.threads.com/@vibecoding.taiwan" target="_blank" rel="noopener">
+          <span class="soc-ic th"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.2 2C6.9 2 3.5 5.4 3.5 12s3.4 10 8.7 10c4 0 6.6-2 7.6-4.9.5-1.5.4-3.6-.6-5-.8-1.1-2-1.8-3.5-2 0-1.1-.5-1.9-1.4-2.3-1.4-.6-3.3-.2-4.1 1.4l1.5.8c.4-.7 1.2-.9 1.9-.6.3.1.5.4.6.8-2 .1-3.7.8-4.4 2.3-.6 1.4-.1 3.1 1.5 3.7 1.9.7 3.9-.3 4.6-2.4.2-.5.3-1.1.3-1.8.7.2 1.2.5 1.5 1 .5.7.6 2 .3 3-.7 2-2.5 3.2-5.4 3.2-4 0-6.5-2.4-6.5-8s2.5-8 6.5-8c3 0 4.9 1.4 5.9 3.9l1.8-.7C18.8 3.8 16.1 2 12.2 2zm-.5 10.9c-.3.9-1.1 1.4-1.9 1.1-.6-.2-.8-.8-.6-1.3.3-.7 1.3-1 2.5-1-.1.5-.1.9-.2 1.2z"/></svg></span>
+          <span class="soc-tx"><span class="st">Threads</span><span class="sd">@vibecoding.taiwan</span></span>
+        </a>
+        <a class="soc-btn rv" href="https://openspace.vibes.com.tw/index.html#/zones" target="_blank" rel="noopener">
+          <span class="soc-ic web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+          <span class="soc-tx"><span class="st">Open Space</span><span class="sd">vibes.com.tw</span></span>
+        </a>
+        <a class="soc-btn rv" href="mailto:imnivek@gmail.com">
+          <span class="soc-ic mail"><svg viewBox="0 0 24 24" fill="none" stroke="#1A140F" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span class="soc-tx"><span class="st">Email</span><span class="sd">聯絡信箱</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="fname">鄭凱文 Kevin Cheng</div>
+    <div class="fen">Co-Founder · 404 TABLE</div>
+    <button class="save-btn" id="saveBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z"/><path d="M16 2v4M8 2v4"/><circle cx="12" cy="14" r="3"/></svg>
+      儲存聯絡人 vCard
+    </button>
+    <div class="frow">
+      <span class="fbrand">404方桌</span> · Vibe Coding · 25HRS · 7G 奇雞先生<br>
+      連續創業者 · AI 整合操盤手 · 跨域成長設計師
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  // reveal on scroll
+  var rvs = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    rvs.forEach(function(el){ io.observe(el); });
+  } else { rvs.forEach(function(el){ el.classList.add('in'); }); }
+
+  // accordion
+  document.querySelectorAll('.exp-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var exp = btn.parentElement;
+      var body = exp.querySelector('.exp-body');
+      var open = exp.classList.contains('open');
+      if(open){ body.style.maxHeight = null; exp.classList.remove('open'); }
+      else { exp.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    });
+  });
+
+  // vCard download
+  var vcard = [
+    'BEGIN:VCARD','VERSION:3.0',
+    'N:鄭;凱文;;;','FN:鄭凱文 Kevin Cheng',
+    'ORG:404方桌 (404 TABLE)','TITLE:共同創辦人 Co-Founder',
+    'EMAIL;TYPE=INTERNET:imnivek@gmail.com',
+    'URL:https://imnivek.github.io/404table-website-v2/index.html',
+    'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/nivek0329/',
+    'X-WECHAT:taiwan-kevin',
+    'NOTE:連續創業者 · AI 整合操盤手 · 跨域成長設計師',
+    'END:VCARD'
+  ].join('\r\n');
+  document.getElementById('saveBtn').addEventListener('click', function(){
+    var blob = new Blob([vcard], {type:'text/vcard;charset=utf-8'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'KevinCheng.vcf';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  });
+})();
+</script>
+</body>
+</html>
