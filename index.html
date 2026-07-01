@@ -119,8 +119,11 @@
     font-size:clamp(40px,13vw,56px);line-height:1;letter-spacing:1px;margin:0 0 8px;
   }
   .hero .en{position:relative;z-index:1;font-family:'Inter',serif;font-style:italic;font-weight:400;font-size:20px;color:var(--on-dark-2);margin:0 0 18px;letter-spacing:.5px;}
-  .hero .role{position:relative;z-index:1;font-size:16px;font-weight:700;margin:0 0 4px;color:var(--on-dark);}
+  .hero .role{position:relative;z-index:1;font-size:17px;font-weight:700;margin:0 0 5px;color:var(--on-dark);letter-spacing:.3px;}
   .hero .role span{color:var(--accent);}
+  .hero .role-sub{position:relative;z-index:1;font-size:13px;font-weight:500;margin:0;color:var(--on-dark-2);}
+  .hero .role-sub b{color:var(--on-dark);font-weight:700;}
+  .hero .role-sub span{color:var(--accent);}
   .tagline{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 18px;}
   .tag{font-size:12px;font-weight:500;padding:5px 12px;border-radius:999px;border:1px solid var(--line-dark);background:rgba(251,248,243,.04);color:var(--on-dark);}
   .hero .lead{position:relative;z-index:1;font-size:14.5px;line-height:1.75;color:var(--on-dark-2);margin:0 0 18px;}
@@ -311,13 +314,16 @@
     </div>
     <h1>鄭凱文</h1>
     <p class="en">Kevin Cheng</p>
-    <p class="role">404方桌 共同創辦人 · <span>Co-Founder</span></p>
+    <p class="role">連續創業者 × 跨域整合操盤手</p>
+    <p class="role-sub"><b>404方桌</b> · <b>Vibe Coding</b> 共同創辦人 · <span>Co-Founder</span></p>
     <div class="tagline">
-      <span class="tag">連續創業者</span>
-      <span class="tag">AI 整合操盤手</span>
-      <span class="tag">跨域成長設計師</span>
+      <span class="tag">0→1 品牌操盤</span>
+      <span class="tag">AI 整合落地</span>
+      <span class="tag">跨國增長</span>
+      <span class="tag">社群策展</span>
+      <span class="tag">教育培訓</span>
     </div>
-    <p class="lead">從 <b>9 間連鎖品牌</b>、<b>20 人跨國團隊</b>，到 <b>600+ 人 AI 開發者社群</b>——10 年實戰經驗，整合為 AI 時代的成長飛輪。</p>
+    <p class="lead">從 <b>教育講台</b>、<b>9 間連鎖品牌</b>、<b>20 人跨國團隊</b>，到 <b>600+ 人 AI 社群</b>——十年跨域實戰，整合成 AI 時代的成長飛輪。</p>
     <p class="creds">NTNU 雙學士　·　ex-Microsoft Student Partner　·　ex-Samsung Mobiler</p>
 
     <div class="hero-cta">
@@ -336,8 +342,8 @@
   <section>
     <div class="quote rv">
       <p class="sub">Positioning</p>
-      <h3>文化不會<em>退流行</em>，<br>只是在等一個新版本。</h3>
-      <p>我用 AI 幫命理、財商這些老智慧改版，做成這個世代打得開、也用得上的樣子——帶著 600+ 人的社群，把老東西的溫度，玩成新的潮流。</p>
+      <h3>好東西不會<em>退流行</em>，<br>只是在等一個新版本。</h3>
+      <p>從補習班講台、連鎖餐飲、跨國增長到 600+ 人的 AI 社群——我一直在做同一件事：把複雜的、老派的好東西，翻譯成這個世代打得開、也用得上的新版本。</p>
     </div>
   </section>
 
@@ -590,7 +596,7 @@
     </button>
     <div class="frow">
       <span class="fbrand">404方桌</span> · Vibe Coding · 25HRS · 7G 奇雞先生<br>
-      連續創業者 · AI 整合操盤手 · 跨域成長設計師
+      連續創業 · AI 整合 · 跨國增長 · 社群策展 · 教育培訓
     </div>
   </footer>
 
@@ -622,12 +628,12 @@
   var vcard = [
     'BEGIN:VCARD','VERSION:3.0',
     'N:鄭;凱文;;;','FN:鄭凱文 Kevin Cheng',
-    'ORG:404方桌 (404 TABLE)','TITLE:共同創辦人 Co-Founder',
+    'ORG:404方桌 · Vibe Coding','TITLE:共同創辦人 · 連續創業者 × 跨域整合操盤手',
     'EMAIL;TYPE=INTERNET:imnivek@gmail.com',
     'URL:https://imnivek.github.io/404table-website-v2/index.html',
     'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/nivek0329/',
     'X-WECHAT:taiwan-kevin',
-    'NOTE:連續創業者 · AI 整合操盤手 · 跨域成長設計師',
+    'NOTE:連續創業 · AI 整合 · 跨國增長 · 社群策展 · 教育培訓｜404方桌 · Vibe Coding 共同創辦人',
     'END:VCARD'
   ].join('\r\n');
   document.getElementById('saveBtn').addEventListener('click', function(){
